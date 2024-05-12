@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CP_POS.props" />
+</Project>
