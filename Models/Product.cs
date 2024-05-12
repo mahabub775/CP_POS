@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CP_POS.Models;
 
@@ -27,4 +28,9 @@ public partial class Product
     public virtual ICollection<SaleInvoiceDetail> SaleDetails { get; set; } = new List<SaleInvoiceDetail>();
 
     public virtual MeasurementUnit? Unit { get; set; }
+
+    #region Derived
+    [NotMapped]
+    public string? CategoryName { get; set; }
+	#endregion
 }
